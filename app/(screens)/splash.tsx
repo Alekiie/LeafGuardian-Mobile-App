@@ -1,27 +1,38 @@
-import { View, Text } from "react-native";
-import React from "react";
+import { View, Text, ImageBackground, useWindowDimensions } from "react-native";
+import React, { useEffect } from "react";
+import { useRouter } from "expo-router";
 
 export default function SplashScreen() {
+  const router = useRouter();
+  const { width, height } = useWindowDimensions();
+  useEffect(() => {
+    setTimeout(() => {
+        router.push("/(tabs)")
+    }, 2000);
+  }, []);
   return (
-    <View
+    <ImageBackground
+      source={require("../../assets/images/splash-images.png")}
       style={{
-        display: "flex",
         flex: 1,
-        backgroundColor: "#1B4332",
-        alignItems: "center",
         justifyContent: "center",
+        alignItems: "center",
       }}
+      resizeMode="cover"
     >
       <Text
         style={{
-          color: "white",
-          fontSize: 30,
+          fontSize: 34,
           fontWeight: "bold",
-          fontStyle: "normal",
+          color: "rgba(255, 255, 255, 0.9)",
+          textShadowColor: "rgba(0, 0, 0, 0.8)",
+          textShadowOffset: { width: 1, height: 1 },
+          textShadowRadius: 5,
         }}
       >
         Leaf Guardian
       </Text>
-    </View>
+      <Text style={{ marginTop: 10, color: "#fff" }}>LOADING ...</Text>
+    </ImageBackground>
   );
 }
