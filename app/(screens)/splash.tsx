@@ -5,11 +5,13 @@ import { useRouter } from "expo-router";
 export default function SplashScreen() {
   const router = useRouter();
   const { width, height } = useWindowDimensions();
+  
   useEffect(() => {
     setTimeout(() => {
-        router.push("/(tabs)")
+        router.push("/(tabs)"); 
     }, 2000);
   }, []);
+
   return (
     <ImageBackground
       source={require("../../assets/images/splash-images.png")}
