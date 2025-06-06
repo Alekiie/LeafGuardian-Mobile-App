@@ -4,6 +4,18 @@
 
 The LeafGuardian mobile application helps users diagnose plant diseases by analyzing images of leaves. Users can either capture a new image using their device's camera or upload an existing image from their gallery. The application then sends the image to a backend server for analysis, which returns a prediction of the disease, a description of the disease, and suggestions for treatment.
 
+
+## Screenshots
+## Screenshots
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="screenshot1.jpg" alt="Splash Screen" width="200"/>
+  <img src="Screenshot_20250226-171007.jpg" alt="Home Screen" width="200"/>
+  <img src="screenshot2.jpg" alt="Capture Screen" width="200"/>
+    <img src="screenshot4.jpg" alt="Select Image" width="200"/>
+  <img src="screenshot5.jpg" alt="Results" width="200"/>
+</div>
+
 ## Features and Functionality
 
 *   **Image Capture/Upload:** Allows users to take a photo of a leaf directly within the app or upload an image from their device's gallery.
